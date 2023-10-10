@@ -41,16 +41,6 @@ plot(elevation2)
 
 
 
-# LEZIONE 3
-# uinstall.pcakages("spatstat")
-library(spatstat)
-library(terra)
-# vogliamo passare ad una funzione di densità
-densitymap<-density(bei)
-# we aren't dealing with points anymore, but with pixels
-# vogliamo sovrapporre alla mappa di densità anche la mappa dei punti
-# questa funzione si chiama points
-points(bei,cex=.4)
 
 
 
