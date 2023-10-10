@@ -34,3 +34,9 @@ plot(people, microplastics, pch=19)
 
 plot(people, microplastics, pch=19, cex=2)
 plot(people, microplastics, pch=19, cex=2, col="blue")
+
+#package sp
+# sp: Classes and Methods for Spatial Data
+#cran is where all the packages are stored
+install.packages('sp')
+library(sp)
