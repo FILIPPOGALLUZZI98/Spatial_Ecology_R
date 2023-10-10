@@ -34,3 +34,22 @@ plot(elevation)
 # second method to select elements
 elevation2 <- bei.extra[[1]]
 plot(elevation2)
+
+
+
+
+
+# LEZIONE 3
+# uinstall.pcakages("spatstat")
+library(spatstat)
+library(terra)
+# dataset bei--> tropical forest trees
+bei
+plot(bei)
+plot(bei, pch=19, cex=.5) 
+# vogliamo passare ad una funzione di densità
+densitymap<-density(bei)
+# we aren't dealing with ppints anymore, but with pixels
+# vogliamo sovrapporre alla mappa di densità anche la mappa dei punti
+# questa funzione si chiama points
+points(bei,cex=.4)
