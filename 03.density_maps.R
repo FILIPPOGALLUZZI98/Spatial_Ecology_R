@@ -1,4 +1,3 @@
-# unistall.packages("spatstat")
 library(spatstat)
 library(terra)
 
