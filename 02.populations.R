@@ -1,4 +1,3 @@
-# LEZIONE 1
 # Code related to population ecology
 
 # A package is needed for point pattern analysis
