@@ -1,3 +1,4 @@
+# LEZIONE 1
 # Code related to population ecology
 
 # A package is needed for point pattern analysis
@@ -7,6 +8,7 @@ install.packages("spatstat")
 library(spatstat) # to check if it has been installed
 
 #the dataset is called 'bei' and it's inside the package spatstat
+# dataset bei--> tropical forest trees
 # data description:
 #aways put the link as a comment
 # https://CRAN.R-project.org/package=spatstat
@@ -43,13 +45,13 @@ plot(elevation2)
 # uinstall.pcakages("spatstat")
 library(spatstat)
 library(terra)
-# dataset bei--> tropical forest trees
-bei
-plot(bei)
-plot(bei, pch=19, cex=.5) 
 # vogliamo passare ad una funzione di densità
 densitymap<-density(bei)
-# we aren't dealing with ppints anymore, but with pixels
+# we aren't dealing with points anymore, but with pixels
 # vogliamo sovrapporre alla mappa di densità anche la mappa dei punti
 # questa funzione si chiama points
 points(bei,cex=.4)
+
+
+
+
