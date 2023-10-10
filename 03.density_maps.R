@@ -1,5 +1,4 @@
-# LEZIONE 2
-# unistall.pcakages("spatstat")
+# unistall.packages("spatstat")
 library(spatstat)
 library(terra)
 
@@ -22,5 +21,5 @@ cl<-colorRampPalette(c("black","red","orange","yellow"))(100)
 
 plot(densitymap,col=cl)
 # il giallo è il colore che impatta maggiormente, quindi va usato con cautela perché il primo che viene visto in una mappa
-# va messo in alto
+# va quindi messo in alto
 
