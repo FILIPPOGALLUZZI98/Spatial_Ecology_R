@@ -5,3 +5,4 @@ library(terra)
 bei
 plot(bei)
 plot(bei, pch=19, cex=.5) 
+# vogliamo passare ad una funzione di densità
