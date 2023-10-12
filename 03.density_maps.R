@@ -1,5 +1,4 @@
 library(spatstat)
-library(terra)
 
 bei
 # vogliamo passare ad una funzione di densità
