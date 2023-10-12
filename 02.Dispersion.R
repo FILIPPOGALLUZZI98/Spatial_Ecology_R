@@ -16,7 +16,7 @@ file<-system.file("external/species.shp",package="sdm")
 rana<-vect(file) # rana temporaria
 
 rana$Occurrence # stare attenti alla maiuscola
-ottengo una stringa di zeri e uno, rappresentano presence or absence data
+# ottengo una stringa di zeri e uno, rappresentano presence or absence data
 # se ci sono informazioni sull'abbondanza allora abundance data
 
 plot(rana)
