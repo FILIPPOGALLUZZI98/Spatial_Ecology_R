@@ -1,6 +1,6 @@
 # why population disperse over the landscape in a certain manner?
 # ricordare che se voglio prendere dei dati da una cartella o da qualche altra parte ho bisogno di mettere le ""
-# CHE DIFFERENZAC'è TRA BEI E RANA, E PERCHé NON POSSO FARE DENSITY MAP CON RANA??
+# per fare la densitymap di rana devo usare ppp() del pacchetto spatstat 
 
 library(sdm)
 # sdm=species distribution model
