@@ -87,8 +87,15 @@ preds <- c(elevmap, precmap, tempmap, vegemap)
 cl <- colorRampPalette(c('blue','orange','red','yellow')) (100)
 plot(preds, col=cl) 
 
-
-
-
+# VOGLIO VEDERE I PREDICTORS CON SOVRAPPOSTE LE PRESENCE
+par(mfrow=c(2,2))
+plot(elevmap)
+points(pres,cex=1,col="black")
+plot(tempmap)
+points(pres,cex=1,col="black")
+plot(precmap)
+points(pres,cex=1,col="black")
+plot(vegemap)
+points(pres,cex=1,col="black")
 
 
