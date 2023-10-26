@@ -14,7 +14,7 @@ b2<-im.import("sentinel.dolomites.b2.tif")
 # le bande differiscono in base alla lunghezza d'onda di osservazione
 b2 # per vedere le caratteristiche
 
-
-
+clb<-colorRampPalette(c("darkgrey","grey","lightgrey"))(100)
+plot(b2,col=clb)
 
 
