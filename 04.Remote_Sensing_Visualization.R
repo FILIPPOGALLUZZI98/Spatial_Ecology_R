@@ -62,7 +62,7 @@ plot(stacksent, col=cl)
 im.plotRGB.user(stacksent, 3, 2, 1)  # plotta i primi tre layers in componenti RGB
 # multiframe con i colori naturali e l'immagine con colori falsati
 par(mfrow=c(1,2))
-im.plotRGB.user(stacksent, 3, 2, 1)  # it plots the first three layers in the RGB components
+im.plotRGB.user(stacksent, 3, 2, 1)  # This function plots a RGB image from a SpatRaster object
 im.plotRGB.user(stacksent, 4, 3, 2)  # it plots the first three layers in the RGB components
 
 # In questo modo posso visualizzare informazioni che non potrei vedere con i colori naturali: per esempio il NIR
