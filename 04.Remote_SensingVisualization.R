@@ -8,7 +8,10 @@ library(imageRy)
 library(terra)
 
 #list the data
-im.list()
+im.list() # This function produces a character vector of the names of files stored in the imageRy package directory.
+# Adesso vogliamo importare le bande che vogliamo usare
+im.import() # This function imports a chosen image stored in the imageRy package.
+
 # "sentinel.dolomites.b2.tif" questo indica la banda 2 del satellite
 b2<-im.import("sentinel.dolomites.b2.tif")
 # le bande differiscono in base alla lunghezza d'onda di osservazione
@@ -65,3 +68,6 @@ plot(b8, col=cln)
 # band4 red element 3, stacksent[[3]]
 # band8 nir element 4, stacksent[[4]]
 im.plotRGB(stacksent,r=3,g=2,b=1)
+
+
+
