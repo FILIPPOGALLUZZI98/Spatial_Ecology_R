@@ -58,27 +58,29 @@ stacksent <- c(b2, b3, b4, b8) # creo un array con le varie componenti
 plot(stacksent, col=cl)
 # plot(stacksent[[4]], col=cl) --> per plottare una sola delle componenti
 
+
 im.plotRGB.user(stacksent, 3, 2, 1)  # plotta i primi tre layers in componenti RGB
 # multiframe con i colori naturali e l'immagine con colori falsati
 par(mfrow=c(1,2))
 im.plotRGB.user(stacksent, 3, 2, 1)  # it plots the first three layers in the RGB components
 im.plotRGB.user(stacksent, 4, 3, 2)  # it plots the first three layers in the RGB components
 
-
-
+# In questo modo posso visualizzare informazioni che non potrei vedere con i colori naturali: per esempio il NIR
 im.plotRGB(stacksent,r=3,g=2,b=1) # in questo modo sto plottando i dati nei giusti colori
 im.plotRGB(stacksent,r=3,g=4,b=2) # in questo modo sto spostando le diverse bande, per esempio per visualizzare il NIR
 im.plotRGB(stacksent,r=3,g=2,b=4) # metto il NIR nella componente blu: tutto quello che riflette NIR diventa blu
 
 
+
+
 # Per capire quale delle componenti porta più informazioni
 # pairs()--> produce una matrice di scatterplot
-# serve per misurare la correlazione tra più variabili
+# Serve per misurare la correlazione tra più variabili
 pairs(stacksent)
-# nella traccia ci sono le varie bande
-# nei grafici fuori dalla traccia ci sono i coefficienti di pearson e le correlazioni tra le diverse bande
-# le prime tre bande(quelle visibili) sono molto correlate
-# una bassa correlazione significa che il NIR porta ulteriori informazioni, mentre le altre portano le stesse informazioni
+# Nella traccia ci sono le varie bande
+# Nei grafici fuori dalla traccia ci sono i coefficienti di pearson e le correlazioni tra le diverse bande
+# Le prime tre bande(quelle visibili) sono molto correlate
+# Una bassa correlazione significa che il NIR porta ulteriori informazioni, mentre le altre portano le stesse informazioni
 
 
 
