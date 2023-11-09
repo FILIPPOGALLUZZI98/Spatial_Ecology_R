@@ -27,23 +27,27 @@ im.plotRGB(m2006, 1, 2, 3)
 
 
 
-# Calcolare il DVI
-dvi1992 = m1992[[1]] - m1992[[2]]
+# Calcolare il DVI --> The DVI is computed as the difference 
+# between near-infrared (NIR) and red (RED) reflectance
+plot(m1992[[1]]) # questa è la prima banda --> NIR
+plot(m1992[[2]]) # questa è la seconda banda --> RED
+dvi1992 = m1992[[1]] - m1992[[2]] # il DVI è calcolato 
 dvi1992
-cl <- colorRampPalette(c("darkblue", "yellow", "red", "black"))(100) # specifying a color scheme
+cl <- colorRampPalette(c("darkblue", "yellow", "red", "black"))(100) 
 plot(dvi1992, col=cl)
 
+# faccio lo stesso per l'immagine del 2006
 dvi2006 = m2006[[1]] - m2006[[2]]
 dvi2006
 cl <- colorRampPalette(c("darkblue", "yellow", "red", "black"))(100) # specifying a color scheme
 plot(dvi2006, col=cl)
 
-# DVI by imageRy
+# per ottenere DVI con imageRy posso anche fare così
 dvi1992i <- im.dvi(m1992, 1, 2)
 dvi2006i <- im.dvi(m2006, 1, 2)
 
 
-# NDVI
+# NDVI --> (NIR-RED)/(NIR+RED)
 ndvi1992 = (m1992[[1]] - m1992[[2]]) / (m1992[[1]] + m1992[[2]])
 ndvi2006 = (m2006[[1]] - m2006[[2]]) / (m2006[[1]] + m2006[[2]])
 dev.off()
