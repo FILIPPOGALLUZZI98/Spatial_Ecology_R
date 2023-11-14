@@ -65,7 +65,10 @@ diffg=stackg[[1]]-stackg[[4]]
 plot(diffg,col=cl2)
 
 
-
+# Make an RGB plot using different years
+im.plotRGB(stackg,r=1,g=2,b=3)
+# In base ai colori posso capire la differenza di T tra i vari periodi:
+# nelle regioni scure le T più alte sono nel periodo finale e viceversa
 
 
 
