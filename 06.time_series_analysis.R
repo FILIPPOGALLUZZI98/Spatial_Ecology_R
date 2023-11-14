@@ -1,10 +1,16 @@
 # Time series analysis
+# Dati da Sentinel
 library(imageRy)
 library(terra)
 
-im.list() #let's use the image: EN_01 (it means European Nitrogen)
+
+####################################################
+#### NO2 over Europe during Covid
+####################################################
+
+im.list() #let's use the image: EN_01 (it means European Nitrogen, il numero si riferisce al periodo)
 jan<-im.import("EN_01.png") # It's a representation in RGB of NO2 over Europe in january
-mar<-im.import("EN_13.png") # The same in march (last time interval)
+mar<-im.import("EN_13.png") # The same in march (last time-interval)
 
 par(mfrow=c(2,1))
 plot(jan)
@@ -27,22 +33,36 @@ plot(diff,col=cl_diff)
 
 
 
-##########################
+
+####################################################
 #### GREENLAND
-##########################
+####################################################
 
+cl<-colorRampPalette(c("yellow","blue","white","red"))(100)
+g2000<-im.import("greenland.2000.tif") # Relative temperature in 2000 over Greenland Surface
+plot(g2000,col=cl)
 
+# Importiamo tutte le immagini
+g2005<-im.import("greenland.2005.tif")
+g2010<-im.import("greenland.2010.tif")
+g2015<-im.import("greenland.2015.tif")
 
+par(mfrow=c(2,2))
+plot(g2000,col=cl)
+plot(g2005,col=cl)
+plot(g2010,col=cl)
+plot(g2015,col=cl)
+# Possiamo vedere dal confronto 2000 vs.2015 che le zone nere (quelle più fredde)
+# sono diminuite in estensione
+# 2000/2005 si osserva una diminuzione di T molto elevata
 
+stackg<-c(g2000,g2005,g2010,g2015) 
+plot(stackg,col=cl) 
 
-
-
-
-
-
-
-
-
+# Fare differenza tra primo e ultimo elemento dello stack (tra 2000 e 2015)
+cl2<-colorRampPalette(c("blue","white","red"))(100)
+diffg=stackg[[1]]-stackg[[4]]
+plot(diffg,col=cl2)
 
 
 
