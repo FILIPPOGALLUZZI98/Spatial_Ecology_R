@@ -1,18 +1,3 @@
-# I can use R as a calculator
-2 + 3
-
-# Assign to an object
-a <- 2 + 3
-a
-
-b <- 5 + 3
-b
-
-final <- a * b
-final
-
-final^2
-
 # array
 # c(...) means "concatenate", I can use it to create arrays
 sophi <- c(10, 20, 30, 50, 70) # microplastics 
@@ -34,9 +19,3 @@ plot(people, microplastics, pch=19)
 
 plot(people, microplastics, pch=19, cex=2)
 plot(people, microplastics, pch=19, cex=2, col="blue")
-
-#package sp
-# sp: Classes and Methods for Spatial Data
-#cran is where all the packages are stored
-install.packages('sp')
-library(sp)
