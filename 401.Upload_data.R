@@ -29,6 +29,8 @@ setwd("D:R_Studio/Immagini_Monitoring/Immagini_Prova")
 img1<-rast("Naja_City_May_20_2003.jpg")
 img2<-rast("Naja_City_Ago_07_2023.jpg")
 # Su windows ricordare di aggiungere l'estensione alla fine perché la nasconde!!
+img1
+# Le immagini sono formate da 3 componenti, che corrispondono alle bande RGB
 
 # In 'terra' invece di usare 'im.plotRGB' possiamo usare:
 plotRGB(img1,r=1,g=2,b=3)
@@ -42,7 +44,9 @@ diff=img1[[1]] - img2[[1]]
 cl<-colorRampPalette(c("brown","grey","orange"))(100)
 plot(diff,col=cl)
 
-# IMMAGINI PROVA 2
+###########################################
+###### IMMAGINI DI PROVA 2
+##########################################
 img3<-rast("Klamath_Basin_June_14_2000.jpg")
 img4<-rast("Klamath_Basin_June_17_2001.jpg")
 par(mfrow=c(1,2))
