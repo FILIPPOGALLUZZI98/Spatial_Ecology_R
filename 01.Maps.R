@@ -3,9 +3,8 @@
 library(sdm)
 library(terra)
 
-# Per vedere quali dataset contengono questi pacchetti:
-data()
-dir()
+# C:\Users\filip\AppData\Local\R\win-library\4.3\sdm
+# Ricordare di mettere "mostra nascosti"
 # system.file() --> finds the full file names of files in packages
 file<-system.file("external/species.shp",package="sdm")
 # "external/nomefile.shp" --> external perché sto cercando un file esterno ad R, 
@@ -13,7 +12,7 @@ file<-system.file("external/species.shp",package="sdm")
 
 # .shp are called vector files--> series of coordinates
 # Fin'ora ho solamente richiamato il nome del file
-# C'è una funzione in terra per passare dal nome del file ai punti:
+# C'è una funzione in 'terra' per passare dal nome del file ai punti:
 rana<-vect(file) # rana temporaria
 
 rana$Occurrence # stare attenti alla maiuscola
@@ -43,10 +42,7 @@ dev.off()
 plot(pres,col="red")
 points(abse,col="yellow")
 
-
-
-
-
+#########################################################################
 # PREDICTORS
 
 #elevation
