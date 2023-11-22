@@ -1,18 +1,19 @@
-# why population disperse over the landscape in a certain manner?
-# ricordare che se voglio prendere dei dati da una cartella o da qualche altra parte ho bisogno di mettere le ""
-# per fare la densitymap di rana devo usare ppp() del pacchetto spatstat 
+# Why population disperse over the landscape in a certain manner?
 
 library(sdm)
-# sdm=species distribution model
-library(terra) # per analisi spaziale
+library(terra)
 
+# Per vedere quali dataset contengono questi pacchetti:
+data()
+dir()
 # system.file() --> finds the full file names of files in packages
 file<-system.file("external/species.shp",package="sdm")
-# "external/nomefile.shp" --> external perché sto cercando un file esterno ad R, in questo caso interno al pacchetto "sdm"
+# "external/nomefile.shp" --> external perché sto cercando un file esterno ad R, 
+# in questo caso interno al pacchetto "sdm"
 
 # .shp are called vector files--> series of coordinates
-# fin'ora ho solamente richiamato il nome del file
-# c'è una funzione in terra per passare dal nome del file ai punti:
+# Fin'ora ho solamente richiamato il nome del file
+# C'è una funzione in terra per passare dal nome del file ai punti:
 rana<-vect(file) # rana temporaria
 
 rana$Occurrence # stare attenti alla maiuscola
