@@ -11,18 +11,19 @@ https://land.copernicus.vgt.vito.be/PDF/portal/Application.html
 
 
 
-###########################
+###########################################
 ###### IMMAGINI DI PROVA
-###########################
+##########################################
 
 library(terra)
 
 # Dopo aver scaricato l'immagine in una cartella:
-# Percorso cartella --> "D:Immagini_Monitoring/Immagini_Prova"
+# Percorso cartella --> "D:R_Studio/Immagini_Monitoring/Immagini_Prova"
 # SE HO SPOSTATO LA CARTELLA O L'HO RINOMINATA --> CONTROLLARE E CAMBIARE
-# Se invece metto "D:\Immagini_Monitoring" non funziona, quindi fare attenzione a "/"
+# Se invece metto "D:\R_Studio/Immagini_Monitoring/Immagini_Prova" non funziona, 
+# quindi fare attenzione a '/' dopo 'D:'
 # setwd --> set working directory
-setwd("D:Immagini_Monitoring/Immagini_Prova")
+setwd("D:R_Studio/Immagini_Monitoring/Immagini_Prova")
 
 # rast() --> per importare l'immagine, come 'im.import'
 img1<-rast("Naja_City_May_20_2003.jpg")
