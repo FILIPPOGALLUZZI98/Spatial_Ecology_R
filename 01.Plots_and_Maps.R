@@ -1,7 +1,5 @@
 # Code related to population ecology
 
-# A package is needed for point pattern analysis
-#everytime we take something that is outside of R we need to use the brackets
 install.packages("spatstat")
 # quando si esce da R, come per il caso dell'installaazione dei pacchetti, dobbiamo usare ""
 library(spatstat) # to check if it has been installed
