@@ -61,7 +61,7 @@ pairs(stacksent)
 # Nei grafici fuori dalla traccia ci sono i coefficienti di pearson e le correlazioni tra le diverse bande
 # Le prime tre bande(quelle visibili) sono molto correlate
 # Una bassa correlazione significa che il NIR porta ulteriori informazioni,
-# mentre le altre portano le stesse informazioni
+# mentre le altre portano la stessa quantità di informazioni
 
 
 
