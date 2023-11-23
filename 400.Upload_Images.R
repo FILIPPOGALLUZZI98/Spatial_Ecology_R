@@ -1,12 +1,11 @@
 # Dopo aver scaricato l'immagine in una cartella:
-# Percorso cartella --> "D:R_Studio/Immagini_Monitoring/Immagini_Prova"
+# Percorso cartella --> "D:R_Studio/Immagini_Monitoring"
 # SE HO SPOSTATO LA CARTELLA O L'HO RINOMINATA --> CONTROLLARE E CAMBIARE
-# Se invece metto "D:\R_Studio/Immagini_Monitoring/Immagini_Prova" non funziona, 
+# Se invece metto "D:\R_Studio/Immagini_Monitoring" non funziona, 
 # quindi fare attenzione a '/' dopo 'D:'
 # setwd --> set working directory
-setwd("D:R_Studio/Immagini_Monitoring/Immagini_Prova")
+setwd("D:R_Studio/Immagini_Monitoring")
 
-# rast() --> per importare l'immagine, come 'im.import'
-img1<-rast("Naja_City_May_20_2003.jpg")
-img2<-rast("Naja_City_Ago_07_2023.jpg")
+# rast() --> per importare l'immagine
+img<-rast("NOME_FILE.ESTENSIONE")
 # Su windows ricordare di aggiungere l'estensione alla fine perché la nasconde!!
