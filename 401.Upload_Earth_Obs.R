@@ -1,11 +1,8 @@
-# AVAILABLE DATA:
 ## Earth Observatory (NASA):
 https://earthobservatory.nasa.gov/
 
 ###########################################
-###### IMMAGINI DI PROVA
-##########################################
-
+# Upload immagine Naja City
 library(terra)
 
 # Dopo aver scaricato l'immagine in una cartella:
