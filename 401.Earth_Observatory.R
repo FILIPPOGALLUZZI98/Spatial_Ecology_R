@@ -1,9 +1,7 @@
 ## Earth Observatory (NASA):
 # https://earthobservatory.nasa.gov/
 
-###########################################
-###### IMMAGINI DI PROVA 1
-##########################################
+####################################################
 # Upload immagine Naja City
 
 library(terra)
@@ -26,9 +24,9 @@ diff=img1[[1]] - img2[[1]]
 cl<-colorRampPalette(c("brown","grey","orange"))(100)
 plot(diff,col=cl)
 
-###########################################
-###### IMMAGINI DI PROVA 2
-##########################################
+####################################################
+# Upload 2nd image 
+
 img3<-rast("Klamath_Basin_June_14_2000.jpg")
 img4<-rast("Klamath_Basin_June_17_2001.jpg")
 par(mfrow=c(1,2))
