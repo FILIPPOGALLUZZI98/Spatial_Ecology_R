@@ -7,6 +7,7 @@ https://earthobservatory.nasa.gov/
 # Upload immagine Naja City
 
 library(terra)
+setwd("D:R_Studio/Immagini_Monitoring/Earth_Observatory")
 
 img1<-rast("Naja_City_May_20_2003.jpg")
 img2<-rast("Naja_City_Ago_07_2023.jpg")
