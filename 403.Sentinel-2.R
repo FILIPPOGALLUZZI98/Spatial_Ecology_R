@@ -1,11 +1,7 @@
 ## Sentinel-2 data (10m, ESA):
 # https://dataspace.copernicus.eu/explore-data/data-collections/sentinel-data/sentinel-2
-
 # Per scaricare immagini serve Login
-# Cliccare su 'Explore Sentinel-2 data'
-# Selezionare dalla mappa l'area che voglio analizzare
-# Andare su 'Search' e selezionare 'Sentinel-2' (o quello che mi interessa)
-# Selezionare il periodo di osservazione e scegliere l'immagine che voglio
+# 'Explore Sentinel-2 data'
 
 
 
