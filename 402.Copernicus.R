@@ -4,7 +4,7 @@
 
 library(terra)
 library(ncdf4)
-setwd("D:R_Studio/Immagini_Monitoring/Copernicus")
+setwd("D:R_Studio/Immagini_Prova_Monitoring")
 
 soil_moist<-rast("Soil_Moisture.nc")
 plot(soil_moist)
