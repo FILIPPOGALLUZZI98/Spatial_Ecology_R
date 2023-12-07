@@ -32,14 +32,14 @@ m1992c <- im.classify(m1992, num_clusters=2)
 m2006c <- im.classify(m2006, num_clusters=2)
 # Le classi sono: agricultural areas=2 e forest=1
 par(mfrow=c(1,2))
-plot(m1992c[[1]])
-plot(m2006c[[1]])
+plot(m1992c)
+plot(m2006c)
 
 # freq() Frequency table of the values of a SpatRaster
 # Conta quanti pixel sono nei vari cluster
-freq2006 <- freq(m2006c[[1]])
+freq2006 <- freq(m2006c)
 freq2006
-freq1992 <- freq(m1992c[[1]])
+freq1992 <- freq(m1992c)
 freq1992
 # ncell() numero di celle dell'immagine
 tot1992 = ncell(m1992)
@@ -51,8 +51,16 @@ perc2006 = freq2006 * 100 / tot2006
 perc2006
 # 55% cluster 1; 45% cluster 2
 
-
-
+# Faccio la tabella finale con le varie percentuali
+class <- c("forest", "human") 
+y1992 <- c(83.08, 16.91)
+y2006 <- c(45.31, 54.69)
+tab <- data.frame(class, y1992, y2006)
+tab
+# Tabella finale
+p1 <- ggplot(tab, aes(x=cover, y=y1992, color=class)) + geom_bar(stat="identity", fill="white")
+p2 <- ggplot(tab, aes(x=cover, y=y2006, color=class)) + geom_bar(stat="identity", fill="white")
+p1+p2
 
 
 
