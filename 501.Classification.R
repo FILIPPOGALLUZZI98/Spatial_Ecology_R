@@ -32,22 +32,25 @@ m1992c <- im.classify(m1992, num_clusters=2)
 m2006c <- im.classify(m2006, num_clusters=2)
 # Le classi sono: agricultural areas=2 e forest=1
 par(mfrow=c(1,2))
-plot(m1992c)
-plot(m2006c)
+plot(m1992c[[1]])
+plot(m2006c[[1]])
 
 # freq() Frequency table of the values of a SpatRaster
-freq2006 <- freq(m2006c)
+# Conta quanti pixel sono nei vari cluster
+freq2006 <- freq(m2006c[[1]])
 freq2006
-freq1992 <- freq(m1992c)
+freq1992 <- freq(m1992c[[1]])
 freq1992
-
 # ncell() numero di celle dell'immagine
 tot1992 = ncell(m1992)
 perc1992 = freq1992 * 100 / tot1992
 perc1992
+# 83% cluster 1 --> forest; 17% cluster 2 --> agricultural
 tot2006 = ncell(m2006)
 perc2006 = freq2006 * 100 / tot2006
 perc2006
+# 55% cluster 1; 45% cluster 2
+
 
 
 
