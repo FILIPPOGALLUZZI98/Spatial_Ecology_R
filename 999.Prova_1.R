@@ -22,9 +22,9 @@ perc1
 perc2
 
 class <- c("classe 1", "classe 2","classe 3") 
-y2000 <- c(perc1$count[1],perc1$count[2] ,perc1$count[3])
-y2001 <- c(perc2$count[1],perc2$count[2] ,perc2$count[3])
+y2000 <- c(24,47,29)
+y2001 <- c(42,28,30)
 tab <- data.frame(class, y2000, y2001)
-p1 <- ggplot(tab, aes(x=cover, y=y2000, color=class)) + geom_bar(stat="identity", fill="white")
-p2 <- ggplot(tab, aes(x=cover, y=y2001, color=class)) + geom_bar(stat="identity", fill="white")
+p1 <- ggplot(tab, aes(x=class, y=y2000, color=class)) + geom_bar(stat="identity", fill="white")
+p2 <- ggplot(tab, aes(x=class, y=y2001, color=class)) + geom_bar(stat="identity", fill="white")
 p1+p2
