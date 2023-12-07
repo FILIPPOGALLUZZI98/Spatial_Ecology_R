@@ -58,8 +58,8 @@ y2006 <- c(45.31, 54.69)
 tab <- data.frame(class, y1992, y2006)
 tab
 # Tabella finale
-p1 <- ggplot(tab, aes(x=cover, y=y1992, color=class)) + geom_bar(stat="identity", fill="white")
-p2 <- ggplot(tab, aes(x=cover, y=y2006, color=class)) + geom_bar(stat="identity", fill="white")
+p1 <- ggplot(tab, aes(x=class, y=y1992, color=class)) + geom_bar(stat="identity", fill="white")
+p2 <- ggplot(tab, aes(x=class, y=y2006, color=class)) + geom_bar(stat="identity", fill="white")
 p1+p2
 
 
