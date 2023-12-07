@@ -27,4 +27,5 @@ y2001 <- c(42,28,30)
 tab <- data.frame(class, y2000, y2001)
 p1 <- ggplot(tab, aes(x=class, y=y2000, color=class)) + geom_bar(stat="identity", fill="white")
 p2 <- ggplot(tab, aes(x=class, y=y2001, color=class)) + geom_bar(stat="identity", fill="white")
-p1+p2
+p1
+p2
