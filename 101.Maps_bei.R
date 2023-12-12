@@ -3,7 +3,7 @@
 # la posizione di 3605 alberi; vogliamo studiare il pattern spaziale
 
 library(spatstat)
-data() # Vediamo i vari dataset contenuti in 'spatstat'
+data() ## Vediamo i vari dataset contenuti in 'spatstat'
 
 # Cerchiamo il dataset 'bei' interno al pacchetto spatstat
 # Ci sono due 'bei', e possiamo vedere le caratteristiche:
@@ -16,7 +16,7 @@ data() # Vediamo i vari dataset contenuti in 'spatstat'
 # elev (elevation in metres) and grad (norm of elevation gradient).
 
 # Per osservare la disposizione degli alberi nello spazio
-plot(bei, cex=.2, pch=19) # Abbiamo modificato dimensione e forma dei punti per chiarezza
+plot(bei, cex=.2, pch=19) ## Abbiamo modificato dimensione e forma dei punti per chiarezza
 
 # Facciamo lo stesso con 'bei.extra'
 plot(bei.extra)
