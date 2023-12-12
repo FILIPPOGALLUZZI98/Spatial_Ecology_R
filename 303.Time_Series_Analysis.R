@@ -10,8 +10,8 @@ library(terra)
 im.list()
 
 # Usiamo le immagini 'EN_xx', ovvero European Nitroven (xx è il periodo)
-jan<-im.import("EN_01.png") # It's a representation in RGB of NO2 over Europe in january
-mar<-im.import("EN_13.png") # The same in march (last time-interval)
+jan<-im.import("EN_01.png") ## It's a representation in RGB of NO2 over Europe in january
+mar<-im.import("EN_13.png") ## The same in march (last time-interval)
 par(mfrow=c(2,1))
 plot(jan)
 plot(mar)
