@@ -28,7 +28,7 @@ plot(b4, col=cl)
 plot(b8, col=cl)
 
 # Un altro modo è
-stacksent <- c(b2, b3, b4, b8) # creo un array con le varie componenti 
+stacksent <- c(b2, b3, b4, b8) ## creo un array con le varie componenti 
 plot(stacksent, col=cl)
 # plot(stacksent[[4]], col=cl) --> per plottare una sola delle componenti
 
@@ -47,9 +47,9 @@ plot(stacksent, col=cl)
 im.plotRGB(stacksent,r=3,g=2,b=1)
 
 # Per avere informazioni aggiuntive posso spostare il NIR in una delle altre tre bande
-im.plotRGB(stacksent,r=3,g=2,b=4) # metto il NIR nella componente blu:
+im.plotRGB(stacksent,r=3,g=2,b=4) ## metto il NIR nella componente blu:
 # tutto quello che riflette NIR diventa blu
-im.plotRGB(stacksent,r=4,g=2,b=1) # metto il NIR nella componente rossa:
+im.plotRGB(stacksent,r=4,g=2,b=1) ## metto il NIR nella componente rossa:
 # tutto quello che riflette NIR diventa rosso
 
 
