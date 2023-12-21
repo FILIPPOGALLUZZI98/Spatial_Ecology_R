@@ -19,10 +19,22 @@ plot(nir)
 # Calcola la STD di una cella considerando le celle adiacenti e spostando la 
 # "finestra" pixel dopo pixel --> 'focal()'
 sd3<-focal(nir, matrix(1/9,3,3), fun=sd)  ##  'matrix' descrive la dimensione della moving window
+# in 1/9, il 9 rapresenta il numero di celle (3x3 in questo caso)
 cl<-colorRampPalette(viridis(7))(255)  ## 255 perché sono i diversi valori possibili dei pixel
 plot(sd3, col=cl)
 
+# Plot 3x3 and 7x7 moving windows
+cl<-colorRampPalette(viridis(7))(255)  ## 255 perché sono i diversi valori possibili dei pixel
+sd3<-focal(nir, matrix(1/9,3,3), fun=sd)  ##  'matrix' descrive la dimensione della moving window
+sd7<-focal(nir, matrix(1/49,7,7), fun=sd)  ##  'matrix' descrive la dimensione della moving window
+par(mfrow=c(1,2))
+plot(sd3, col=cl); plot(sd7, col=cl)
+# In 7x7 si nota una maggiore variabilità perché abbiamo considerato una moving window più grande
+# Original image plus the 7x7 sd
+im.plotRGB(img,r=2,g=1,b=3)  ## NIR in top of RED
+plot(sd7, col=cl)
 
-
+# Come scegliere la banda con cui calcolare la variabilità?
+# Usiamo la Multivariate Analysis
 
 
